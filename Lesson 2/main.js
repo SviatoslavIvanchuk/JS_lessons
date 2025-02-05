@@ -223,5 +223,4 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-
 coursesAndDurationArray.forEach(value => value.monthDuration > 5 ? console.log('Супер') : console.log('Не Супер'));
