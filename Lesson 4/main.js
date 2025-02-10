@@ -40,7 +40,7 @@ printArrayItem(array);
 console.log('--------------5-------------');
 // #59g0IsA
 // - створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
-document.write(`<h3>--------------5-------------</h3>`)
+document.write('<h3>--------------5-------------</h3>')
 function paragraphCreate(someText) {
     return document.write(`
         <p>${someText}</p>
@@ -51,7 +51,7 @@ paragraphCreate('Hi, whats up)')
 console.log('--------------6-------------');
 // #hOL6126
 // - створити функцію яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
-document.write(`<h3>--------------6-------------</h3>`)
+document.write('<h3>--------------6-------------</h3>')
 function ulListCreate(text) {
             document.write(`
                 <ul>
@@ -66,7 +66,7 @@ ulListCreate('This text for li');
 console.log('--------------7-------------');
 // #0Kxco1edSN
 // - створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
-document.write(`<h3>--------------7-------------</h3>`)
+document.write('<h3>--------------7-------------</h3>')
 function ulListCreateWithSomeLi(text, liNumbers) {
     document.write(`<ul>`);
     for (let i = 1; i<= liNumbers; i++) {
@@ -79,13 +79,13 @@ ulListCreateWithSomeLi('This text for li with some numbers li', 5);
 console.log('--------------8-------------');
 // #gEFoxMMO
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
-document.write(`<h3>--------------8-------------</h3>`)
+document.write('<h3>--------------8-------------</h3>')
 function arrayDocumentList(arr) {
-    document.write(`<ul>`);
+    document.write('<ul>');
         for (let item of arr) {
             document.write(`<li>${item}</li>`);
         }
-    document.write(`</ul>`);
+    document.write('</ul>');
 }
 arrayDocumentList(array);
 
@@ -99,9 +99,9 @@ let users = [
     {id: 4, name: 'olya', age: 28, status: false}
 ];
 
-document.write(`<h3>--------------9-------------</h3>`)
+document.write('<h3>--------------9-------------</h3>')
 function usersDocumentIter(arr) {
-    document.write(`<div>`);
+    document.write('<div>');
         for (let user of arr) {
             document.write(`<div>${user.id}. ${user.name} - age: ${user.age}</div>`);
         }
@@ -173,6 +173,8 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     for (let currencyValue of currencyValues) {
         if (currencyValue.currency === exchangeCurrency) {
             exchangeValue = sumUAH /currencyValue.value;
+        } else {
+            console.log('wrong currency');
         }
     }
     return exchangeValue;
