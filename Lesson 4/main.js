@@ -68,11 +68,11 @@ console.log('--------------7-------------');
 // - створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
 document.write('<h3>--------------7-------------</h3>')
 function ulListCreateWithSomeLi(text, liNumbers) {
-    document.write(`<ul>`);
+    document.write('<ul>');
     for (let i = 1; i<= liNumbers; i++) {
         document.write(`<li>${text}</li>`);
     }
-    document.write(`</ul>`);
+    document.write('</ul>');
 }
 ulListCreateWithSomeLi('This text for li with some numbers li', 5);
 
@@ -105,7 +105,7 @@ function usersDocumentIter(arr) {
         for (let user of arr) {
             document.write(`<div>${user.id}. ${user.name} - age: ${user.age}</div>`);
         }
-    document.write(`</div>`);
+    document.write('</div>');
 }
 usersDocumentIter(users);
 
