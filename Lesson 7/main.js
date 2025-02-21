@@ -201,12 +201,12 @@ for (let i = 1; i <= 10; i++) {
 
     girlsList.push(new Cinderella(
         `${i}-girl`,
-        `${randomAge}`,
-        `${randomFootSize}`
+        randomAge,
+        randomFootSize
     ))
 }
-let cinderella = girlsList[Math.floor(Math.random()*10+1)];
-cinderella.footSize = '32';
+let cinderella = girlsList[Math.floor(Math.random()*10)];
+cinderella.footSize = 32;
 console.log(girlsList);
 
 for (let girl of girlsList) {
